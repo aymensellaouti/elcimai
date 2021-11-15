@@ -1,3 +1,20 @@
-<p>first works!</p>
+<p
+  (click)="alerter()"
+  [hidden]="isHidden"
+>first works!</p>
+<button
+  (click)="showHide()"
+  class="btn btn-danger">
+  show / hide
+</button>
+<input
+  #monInput
+  (change)="changeMessage(monInput.value)"
+  type="text" class="form-control">
+Le contenu de l'input est : {{ message }}
+<app-second [hidden]="isHidden"></app-second>
 
-<app-second></app-second>
+<!--
+  balises => attributs
+  événts
+-->
