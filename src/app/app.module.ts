@@ -18,6 +18,12 @@ import { DetailComponent } from './cv/detail/detail.component';
 import { CvComponent } from './cv/cv/cv.component';
 import { NgStyleComponent } from './directives/ng-style/ng-style.component';
 import { WordComponent } from './directives/word/word.component';
+import { NgClassComponent } from './directives/ng-class/ng-class.component';
+
+import { HighlightDirective } from './directives/highlight.directive';
+import { RainbowDirective } from './directives/rainbow.directive';
+import { UsdBtcPipe } from './pipes/usd-btc.pipe';
+import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
 
 
 @NgModule({
@@ -35,7 +41,12 @@ import { WordComponent } from './directives/word/word.component';
     DetailComponent,
     CvComponent,
     NgStyleComponent,
-    WordComponent
+    WordComponent,
+    NgClassComponent,
+    HighlightDirective,
+    RainbowDirective,
+    UsdBtcPipe,
+    DefaultImagePipe
   ],
     imports: [
         BrowserModule,

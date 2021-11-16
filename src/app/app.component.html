@@ -1,1 +1,5 @@
-<app-word></app-word>
+<app-cv></app-cv>
+{{ date | date: 'fullDate' | uppercase }}
+<br>
+Le nombre de USD est {{ 3 | usdBtc }}
+Le nombre de BTC est {{ 3 | usdBtc:0 }}

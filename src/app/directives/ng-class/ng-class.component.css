@@ -1,0 +1,14 @@
+.isAllume {
+  border: 1px yellow solid;
+  background-color: yellow;
+}
+
+.isEtteinte {
+  border: 1px black solid;
+}
+
+div {
+  width: 150px;
+  height: 150px;
+  padding: 50px;
+}
