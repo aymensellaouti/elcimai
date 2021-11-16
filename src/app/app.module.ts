@@ -22,8 +22,12 @@ import { NgClassComponent } from './directives/ng-class/ng-class.component';
 
 import { HighlightDirective } from './directives/highlight.directive';
 import { RainbowDirective } from './directives/rainbow.directive';
+
 import { UsdBtcPipe } from './pipes/usd-btc.pipe';
 import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
+import {LoggerService} from "./services/logger.service";
+import {HelloService} from "./services/hello.service";
+import { TodoComponent } from './todo/todo/todo.component';
 
 
 @NgModule({
@@ -46,7 +50,8 @@ import { DefaultImagePipe } from './cv/pipes/default-image.pipe';
     HighlightDirective,
     RainbowDirective,
     UsdBtcPipe,
-    DefaultImagePipe
+    DefaultImagePipe,
+    TodoComponent
   ],
     imports: [
         BrowserModule,
