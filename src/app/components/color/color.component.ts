@@ -8,7 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class ColorComponent implements OnInit {
   @Input() defaultColor = 'red';
   // L'état de la couleur de la DIV
-  color : string;
+  color : string = '';
   constructor() { }
   ngOnInit(): void {
     this.color = this.defaultColor;

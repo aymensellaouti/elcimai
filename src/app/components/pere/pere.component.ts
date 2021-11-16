@@ -6,13 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pere.component.css']
 })
 export class PereComponent implements OnInit {
-
   constructor() { }
-
   ngOnInit(): void {
   }
-
-  processSonMessage(messageDeFiston: string) {
+  processSonMessage(messageDeFiston: number) {
     alert(messageDeFiston);
   }
 }

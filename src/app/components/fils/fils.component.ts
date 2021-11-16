@@ -7,12 +7,12 @@ import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 })
 export class FilsComponent implements OnInit {
   //Créer un event
-  @Output() sendDataToDad = new EventEmitter();
+  @Output() sendDataToDad = new EventEmitter<number>();
   constructor() { }
   ngOnInit(): void {
   }
   sayCc() {
     //emettre l'event avec les données à l'interieur
-    this.sendDataToDad.emit('cc papa');
+    this.sendDataToDad.emit(24);
   }
 }

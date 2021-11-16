@@ -12,6 +12,10 @@ import { TwoComponent } from './components/two/two.component';
 import { CardComponent } from './components/card/card.component';
 import { FilsComponent } from './components/fils/fils.component';
 import { PereComponent } from './components/pere/pere.component';
+import { ListComponent } from './cv/list/list.component';
+import { ItemComponent } from './cv/item/item.component';
+import { DetailComponent } from './cv/detail/detail.component';
+import { CvComponent } from './cv/cv/cv.component';
 
 
 @NgModule({
@@ -23,7 +27,11 @@ import { PereComponent } from './components/pere/pere.component';
     TwoComponent,
     CardComponent,
     FilsComponent,
-    PereComponent
+    PereComponent,
+    ListComponent,
+    ItemComponent,
+    DetailComponent,
+    CvComponent
   ],
     imports: [
         BrowserModule,
