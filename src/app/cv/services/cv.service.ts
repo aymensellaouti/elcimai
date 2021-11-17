@@ -28,4 +28,8 @@ export class CvService {
     }
     return false;
   }
+  addCv(cv: Cv):void {
+    cv.id = this.cvs[this.cvs.length - 1].id + 1;
+    this.cvs.push(cv);
+  }
 }
