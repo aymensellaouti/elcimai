@@ -17,4 +17,15 @@ export class CvService {
   getCv(): Cv[] {
     return this.cvs;
   }
+  getCvById(id: number): Cv | undefined {
+    return this.cvs.find((actualCv) => actualCv.id === id);
+  }
+  deleteCv(cv: Cv): boolean {
+    const index = this.cvs.indexOf(cv);
+    if (index > -1) {
+      this.cvs.splice(index, 1);
+      return true;
+    }
+    return false;
+  }
 }

@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Cv} from "../model/cv";
 import {EmbaucheService} from "../services/embauche.service";
 import {ToastrService} from "ngx-toastr";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-detail',
@@ -12,7 +13,8 @@ export class DetailComponent implements OnInit {
   @Input() cv: Cv | null = null;
   constructor(
     private embaucheService: EmbaucheService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private router: Router
   ) { }
   ngOnInit(): void {
   }
