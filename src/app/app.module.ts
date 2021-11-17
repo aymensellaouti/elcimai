@@ -38,6 +38,8 @@ import { DetailsCvComponent } from './cv/details-cv/details-cv.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { PortailComponent } from './components/portail/portail.component';
 import { NF404Component } from './components/nf404/nf404.component';
+import { TestFormComponent } from './components/test-form/test-form.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -69,7 +71,9 @@ import { NF404Component } from './components/nf404/nf404.component';
     DetailsCvComponent,
     AdminComponent,
     PortailComponent,
-    NF404Component
+    NF404Component,
+    TestFormComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

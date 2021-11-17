@@ -11,8 +11,10 @@ import {DetailsCvComponent} from "./cv/details-cv/details-cv.component";
 import {AdminComponent} from "./components/admin/admin.component";
 import {PortailComponent} from "./components/portail/portail.component";
 import {NF404Component} from "./components/nf404/nf404.component";
+import {LoginComponent} from "./components/login/login.component";
 
 const routes: Routes = [
+  { path: 'login', component: LoginComponent},
   { path: 'color/:couleur', component: ColorComponent},
   // { path: ':qqchose', component: SecondComponent},
   { path: '', component: FirstComponent},
