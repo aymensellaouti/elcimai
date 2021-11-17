@@ -31,6 +31,7 @@ import {TodoComponent} from './todo/todo/todo.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ToastrModule} from "ngx-toastr";
 import { EmbaucheComponent } from './cv/embauche/embauche.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import { EmbaucheComponent } from './cv/embauche/embauche.component';
     UsdBtcPipe,
     DefaultImagePipe,
     TodoComponent,
-    EmbaucheComponent
+    EmbaucheComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
