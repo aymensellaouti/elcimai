@@ -33,6 +33,11 @@ import {ToastrModule} from "ngx-toastr";
 import { EmbaucheComponent } from './cv/embauche/embauche.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterSimulatorComponent } from './components/router-simulator/router-simulator.component';
+import { AddPersonneComponent } from './cv/add-personne/add-personne.component';
+import { DetailsCvComponent } from './cv/details-cv/details-cv.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { PortailComponent } from './components/portail/portail.component';
+import { NF404Component } from './components/nf404/nf404.component';
 
 
 @NgModule({
@@ -59,7 +64,12 @@ import { RouterSimulatorComponent } from './components/router-simulator/router-s
     TodoComponent,
     EmbaucheComponent,
     HeaderComponent,
-    RouterSimulatorComponent
+    RouterSimulatorComponent,
+    AddPersonneComponent,
+    DetailsCvComponent,
+    AdminComponent,
+    PortailComponent,
+    NF404Component
   ],
   imports: [
     BrowserModule,
