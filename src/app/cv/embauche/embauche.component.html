@@ -1,0 +1,11 @@
+<div *ngIf="embauches.length">
+  <h1>Liste des personnes pré selectionnées :</h1>
+  <div class="embauche row">
+    <div class="col"  *ngFor="let embauche of embauches">
+      <app-item
+        [size]="150"
+        [cv]="embauche"
+      ></app-item>
+    </div>
+  </div>
+</div>
