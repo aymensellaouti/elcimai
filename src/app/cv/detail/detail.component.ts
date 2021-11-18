@@ -3,6 +3,7 @@ import {Cv} from "../model/cv";
 import {EmbaucheService} from "../services/embauche.service";
 import {ToastrService} from "ngx-toastr";
 import {Router} from "@angular/router";
+import {CvService} from "../services/cv.service";
 
 @Component({
   selector: 'app-detail',
@@ -14,9 +15,13 @@ export class DetailComponent implements OnInit {
   constructor(
     private embaucheService: EmbaucheService,
     private toastr: ToastrService,
-    private router: Router
+    private router: Router,
+    private cvService: CvService
   ) { }
   ngOnInit(): void {
+    this.cvService.cvSelectSubject.subscribe(
+      (cv) => this.cv = cv
+    );
   }
 
   embaucher() {
