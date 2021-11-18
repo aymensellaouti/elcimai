@@ -20,13 +20,17 @@ export class DetailsCvComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(
-      (params) => {
-        this.cv = this.cvService.getCvById(+params['id']) ?? null;
-        if (!this.cv) {
+      {
+        next: (params) => {
+          this.cvService.getCvById(+params['id']).subscribe(
+            (cv) => {this.cv = cv;}
+          );
+        },
+        error: () => {
           this.router.navigate(['cv']);
         }
       }
-    )
+    );
   }
   deleteCv() {
     if (this.cv) {
