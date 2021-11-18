@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {NgForm} from "@angular/forms";
+import {AuthService} from "../../auth/services/auth.service";
+import {ToastrService} from "ngx-toastr";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -8,9 +11,26 @@ import {NgForm} from "@angular/forms";
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private authService: AuthService,
+    private toastr: ToastrService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
-  login(loginForm: NgForm) {}
+  login(loginForm: NgForm) {
+    this.authService.login(loginForm.value).subscribe(
+      {
+        next: (data) => {
+          localStorage.setItem('token', data.id);
+          this.toastr.success('Bienvenu :)');
+          this.router.navigate(['cv']);
+        },
+        error: (erreur) => {
+          this.toastr.error("Veuillez vérifier vos identifiants");
+        }
+      }
+    )
+  }
 }

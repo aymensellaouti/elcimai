@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Cv} from "../model/cv";
 import {Observable, Subject} from "rxjs";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
 import {API} from "../../constatntes/api.url";
 
 @Injectable({
@@ -32,7 +32,12 @@ export class CvService {
   getFakeCvById(id: number): Cv | undefined {
     return this.cvs.find((actualCv) => actualCv.id === id);
   }
-  deleteCv(cv: Cv): boolean {
+  deleteCv(cv: Cv):Observable<any> {
+    // const params = new HttpParams().set('access_token', localStorage.getItem('token')?? '');
+    const headers = new HttpHeaders().set('Authorization', localStorage.getItem('token')?? '')
+    return this.http.delete<Cv>(API.cv + cv.id, {headers});
+  }
+  deleteFakeCv(cv: Cv): boolean {
     const index = this.cvs.indexOf(cv);
     if (index > -1) {
       this.cvs.splice(index, 1);
