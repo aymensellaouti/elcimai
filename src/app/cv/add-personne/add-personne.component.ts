@@ -18,7 +18,17 @@ export class AddPersonneComponent implements OnInit {
   ngOnInit(): void {
   }
   addCv(formumaire: NgForm) {
-    this.cvService.addCv(formumaire.value);
+    this.cvService.addCv(formumaire.value).subscribe(
+      {
+        next: (cv) => {
+          this.toastr.success(`Le cv de ${cv.firstname} ${cv.name} a été ajouté avec succès`);
+          this.router.navigate(['cv']);
+        },
+        error: () => {
+          this.toastr.error(`Erreur système, veuillez contacter l'admin`);
+        }
+      }
+    );
     this.toastr.success(`Le cv de ${formumaire.value.name} a été ajouté avec succès`);
     this.router.navigate(['cv']);
   }
