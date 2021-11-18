@@ -45,6 +45,7 @@ import {RainbowDirective} from './directives/rainbow.directive';
 import {UsdBtcPipe} from './pipes/usd-btc.pipe';
 import {DefaultImagePipe} from './cv/pipes/default-image.pipe';
 import { TestHttpComponent } from './components/test-http/test-http.component';
+import {AuthInterceptorProvider} from "./interceptors/auth.interceptor";
 
 
 
@@ -93,7 +94,7 @@ import { TestHttpComponent } from './components/test-http/test-http.component';
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(),
   ],
-  providers: [],
+  providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule {
