@@ -40,6 +40,7 @@ import { PortailComponent } from './components/portail/portail.component';
 import { NF404Component } from './components/nf404/nf404.component';
 import { TestFormComponent } from './components/test-form/test-form.component';
 import { LoginComponent } from './components/login/login.component';
+import { TestObservableComponent } from './components/test-observable/test-observable.component';
 
 
 @NgModule({
@@ -73,7 +74,8 @@ import { LoginComponent } from './components/login/login.component';
     PortailComponent,
     NF404Component,
     TestFormComponent,
-    LoginComponent
+    LoginComponent,
+    TestObservableComponent
   ],
   imports: [
     BrowserModule,
