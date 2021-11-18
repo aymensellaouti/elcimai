@@ -12,6 +12,7 @@ import {AdminComponent} from "./components/admin/admin.component";
 import {PortailComponent} from "./components/portail/portail.component";
 import {NF404Component} from "./components/nf404/nf404.component";
 import {LoginComponent} from "./components/login/login.component";
+import {AuthGuard} from "./guards/auth.guard";
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},
@@ -27,7 +28,7 @@ const routes: Routes = [
       { path: 'todo', component: TodoComponent},
       { path: 'cv', children: [
           {path: '', component: CvComponent},
-          {path: 'add', component: AddPersonneComponent},
+          {path: 'add', component: AddPersonneComponent, canActivate: [AuthGuard]},
           {path: ':id', component: DetailsCvComponent},
         ]
       },
